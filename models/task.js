@@ -19,11 +19,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {});
   Task.associate = function(models) {
-    Task.beLongTo(models.Objetive, {
+    Task.belongsTo(models.Objective, {
       foraingKey: 'objectiveId',
       onDelete: 'CASCADE'
     });
-    Task.beLongTo(models.User,{
+    Task.belongsTo(models.User,{
       foraingKey: 'userId',
       as: 'CASCADE'
     });

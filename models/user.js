@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     priority: DataTypes.STRING
   }, {});
   User.associate = function(models) {
-    User.hasMany(models.Objetive, {
+    User.hasMany(models.Objective, {
       foreignKey : 'userId',
       onDelete: 'CASCADE'
     });
