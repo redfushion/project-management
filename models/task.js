@@ -8,11 +8,11 @@ module.exports = (sequelize, DataTypes) => {
     description: {
       type: DataTypes.STRING,
       allowNull: false
-    }
+    },
     deadline: {
       type: DataTypes.DATE,
       allowNull: false
-    }
+    },
     status: {
       type: DataTypes.INTEGER,
       allowNull: false
