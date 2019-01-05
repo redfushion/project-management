@@ -9,15 +9,15 @@ module.exports = (sequelize, DataTypes) => {
   User.associate = function(models) {
     User.hasMany(models.Objetive, {
       foreignKey : 'userId',
-      onDelete: 'CASCADA'
+      onDelete: 'CASCADE'
     });
     User.hasMany(models.Task, {
       foreignKey : 'userId',
-      onDelete: 'CASCADA'
+      onDelete: 'CASCADE'
     });
     User.hasMany(models.Project, {
       foreignKey : 'userId',
-      onDelete: 'CASCADA'
+      onDelete: 'CASCADE'
     });
   };
   return User;

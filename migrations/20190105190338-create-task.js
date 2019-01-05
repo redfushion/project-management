@@ -13,16 +13,16 @@ module.exports = {
         type: Sequelize.STRING
       },
       description: {
-        type: Sequelize.STRING
         allowNull: false,
+        type: Sequelize.STRING
       },
       deadline: {
-        type: Sequelize.DATE
         allowNull: false,
+        type: Sequelize.DATE
       },
       status: {
-        type: Sequelize.INTEGER
         allowNull: false,
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
@@ -32,18 +32,18 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      objetiveId: {
-        type: Sequelize.INTIGER
+      objectiveId: {
+        type: Sequelize.INTEGER,
         onDelete: 'CASCADE',
         references: {
-          model: 'Objetives',
+          model: 'Objectives',
           key: 'id',
-          as: 'objetiveId'
+          as: 'objectiveId'
         }
       },
       userId: {
-        type: Sequelize.INTIGER
-        onDelete: 'CASCADE'
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
         references: {
           model: 'Users',
           key: 'id',
