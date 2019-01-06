@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     Task.belongsTo(models.User,{
       foraingKey: 'userId',
-      as: 'CASCADE'
+      onDelete: 'CASCADE'
     });
   };
   return Task;
